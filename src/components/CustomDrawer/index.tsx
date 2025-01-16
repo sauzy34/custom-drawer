@@ -13,12 +13,11 @@ import Animated, {
   interpolate,
 } from 'react-native-reanimated';
 import Tab from '../Tab';
-import {DrawerContentComponentProps} from '@react-navigation/drawer';
 
 const {width} = Dimensions.get('window');
 const DRAWER_WIDTH = width;
 
-function CustomDrawer({navigation}: DrawerContentComponentProps) {
+function CustomDrawer() {
   const translateX = useSharedValue(0);
   const yOffset = useSharedValue(0);
   const borderRadius = useSharedValue(0);
@@ -79,11 +78,12 @@ const styles = StyleSheet.create({
     marginTop: 60,
   },
   drawer: {
-    // position: 'absolute',
-    // width: DRAWER_WIDTH,
+    position: 'absolute',
+    width: '100%',
     height: '100%',
-    // padding: 24,
-    // zIndex: 9,
+    zIndex: 9,
+    backgroundColor: '#f3f3f3',
+    padding: 32,
   },
   drawerText: {
     color: '#9a9aa1',

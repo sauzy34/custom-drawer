@@ -1,12 +1,12 @@
 import React, {memo} from 'react';
 import {Text} from 'react-native';
 
-function Home() {
+function Start() {
   return (
     <>
-      <Text>Home Home Home Home </Text>
+      <Text>Start</Text>
     </>
   );
 }
 
-export default memo(Home);
+export default memo(Start);
